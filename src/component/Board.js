@@ -2,19 +2,19 @@ import React from "react";
 import Square from "./Square"
 
 class Board extends React.Component {
-  renderSquare() {
+  renderBoard() {
     let arr = [];
     for (let row = 0; row < 9; row = row + 3) {
       arr.push(
         <div className="board-row">
-          {this.renderCol(row)}
+          {this.renderSquare(row)}
         </div>
       );
     }
     return arr;
   }
 
-  renderCol(row) {
+  renderSquare(row) {
     let arr = [];
     for (let col = 0; col < 3; col++) {
       arr.push(
@@ -30,7 +30,7 @@ class Board extends React.Component {
   render() {
     return (
       <div>
-        {this.renderSquare()}
+        {this.renderBoard()}
       </div>
     );
   }
