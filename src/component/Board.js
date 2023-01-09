@@ -19,6 +19,7 @@ class Board extends React.Component {
     for (let col = 0; col < 3; col++) {
       arr.push(
         <Square
+          number={row + col + 1}
           value={this.props.squares[row + col]}
           onClick={() => this.props.onClick(row + col)}
         />
